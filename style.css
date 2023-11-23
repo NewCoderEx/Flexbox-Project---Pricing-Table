@@ -1,0 +1,94 @@
+body {
+  font-family: 'Sono', sans-serif;
+  background-color:  #89CFF3;
+}
+
+.cloud {
+  width:350px; 
+  height:120px; 
+  background-color: #ECEFF1; 
+  border-radius: 100px;
+  position: fixed;
+  top: 100px;
+  left: 50px;
+}
+
+.cloud::after, .cloud::before{
+  content:"";
+  position:relative;
+  display:inline-block;
+  background:inherit;
+  border-radius:inherit;
+}
+.cloud::after{
+  width:100px;
+  height:100px;
+  top:-220px;
+  left:50px;
+}
+.cloud::before{
+  width:180px;
+  height:180px;
+  top: -70px;
+  left:130px;
+}
+
+.pricing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 5rem;
+}
+.pricing-plan {
+  flex: 1;
+  max-width: 400px;
+  height: 300px;
+  background-color: #CDF5FD;  
+  border: 5px solid #000;
+  opacity: 93%; 
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+}
+.plan-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.plan-price {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.plan-features {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.plan-features li {
+  margin-bottom: 20px;
+}
+.plan-button {
+  background-color: #00A9FF;
+  padding: 10px;
+  width: 80px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #CDF5FD;
+  margin-top: 10px;
+}
+.plan-button:hover {
+  background-color: #89CFF3;
+  color: #000;
+}
+
+@media (max-width: 1250px) {
+  .pricing-container {
+    flex-direction: column;
+    height: 100%;
+    margin-top: 80px;
+  }
+}
